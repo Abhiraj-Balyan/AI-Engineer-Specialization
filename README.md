@@ -131,12 +131,9 @@ ai-engineer-specialization/
 ```
 NN-course-name/
 ├── README.md        # Course overview, module checklist, key concepts
-├── notebooks/       # Annotated Jupyter notebooks (one per topic)
-├── src/             # Reusable Python modules
+├── notebooks/       # Annotated Jupyter notebooks (one per topic, labs included)
 ├── notes/           # Theory notes in markdown
-├── labs/            # Lab solutions
-├── project/         # Graded assignments and final project
-└── assets/          # Images and diagrams
+└── project/         # Graded assignments and final project
 ```
 
 ### How the pieces connect
@@ -145,11 +142,8 @@ NN-course-name/
 flowchart TD
     subgraph Course["📁 Course Folder"]
         NB["notebooks/<br/>Annotated notebooks"]
-        SRC["src/<br/>Reusable modules"]
         NOTES["notes/<br/>Theory notes"]
-        LABS["labs/<br/>Lab solutions"]
         PROJ["project/<br/>Graded work"]
-        ASSETS["assets/<br/>Diagrams and images"]
     end
 
     subgraph Shared["📁 shared/"]
@@ -157,17 +151,12 @@ flowchart TD
         DATA["datasets/<br/>Small datasets"]
     end
 
-    NB -->|"extract reusable code"| SRC
-    SRC -->|"import"| NB
-    NB -->|"embed images"| ASSETS
-    NOTES -->|"embed images"| ASSETS
     NB -->|"load data"| DATA
-    LABS -->|"load data"| DATA
     PROJ -->|"load data"| DATA
-    SRC -->|"uses"| UTILS
-    LABS -->|"uses"| SRC
-    PROJ -->|"uses"| SRC
+    NB -->|"uses"| UTILS
+    PROJ -->|"uses"| UTILS
     NOTES -.->|"theory behind"| NB
+    NB -->|"skills applied in"| PROJ
 ```
 
 ---
@@ -609,7 +598,7 @@ load_dotenv()
 2. Read its `README.md` for the module list.
 3. Open `notebooks/` and go in numeric order.
 4. Read `notes/` for the theory behind each notebook.
-5. Compare your own work with `labs/` and `project/`.
+5. Check the graded work in `project/`.
 
 ---
 
@@ -625,7 +614,7 @@ flowchart LR
     D --> E["Add line-by-line<br/>explanations"]
     E --> F["Restart and Run All"]
     F -->|"errors"| D
-    F -->|"clean"| G["Save notes, labs,<br/>reusable src"]
+    F -->|"clean"| G["Save theory notes<br/>and project work"]
     G --> H["git add, commit, push"]
     H --> I["Update course README<br/>and progress tracker"]
 ```
