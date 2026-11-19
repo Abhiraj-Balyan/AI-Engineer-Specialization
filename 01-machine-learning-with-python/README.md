@@ -261,21 +261,15 @@ flowchart TD
 01-machine-learning-with-python/
 ├── README.md
 ├── notebooks/
-├── src/
 ├── notes/
-├── labs/
-├── project/
-└── assets/
+└── project/
 ```
 
 | Folder | What goes in it |
 |---|---|
-| `notebooks/` | Annotated notebooks with concept, code and line-by-line explanations |
-| `src/` | Reusable helpers (plotting, evaluation, pipeline builders) |
-| `notes/` | Theory notes and cheat sheets per module |
-| `labs/` | Your solutions to the course labs |
-| `project/` | Titanic practice project and the rainfall prediction final project |
-| `assets/` | Diagrams, plots and screenshots |
+| `notebooks/` | Annotated notebooks with concept, code and line-by-line explanations, including your lab solutions |
+| `notes/` | Theory notes, formulas and cheat sheets per module |
+| `project/` | Titanic practice project and the rainfall prediction final project, with plots and write-up |
 
 ---
 
@@ -319,7 +313,7 @@ Each notebook follows this order: title and objectives, concept, imports (explai
 
 - Dataset: historical weather data
 - Steps: data cleaning, feature engineering, model building, performance evaluation
-- Deliverables: notebook in `project/`, results summary, confusion matrix and feature importance plots in `assets/`
+- Deliverables: notebook in `project/`, results summary, confusion matrix and feature importance plots saved inside `project/`
 
 ```mermaid
 flowchart LR
@@ -361,14 +355,14 @@ from sklearn.preprocessing import StandardScaler
 
 ## Progress Tracker
 
-| Module | Topic | Notebooks | Notes | Lab | Status |
-|---|---|---|---|---|---|
-| 1 | ML Foundations | 01 | ⬜ | ⬜ | ⬜ |
-| 2 | Linear and Logistic Regression | 02 to 05 | ⬜ | ⬜ | ⬜ |
-| 3 | Supervised Learning Models | 06 to 10 | ⬜ | ⬜ | ⬜ |
-| 4 | Unsupervised Learning Models | 11 to 14 | ⬜ | ⬜ | ⬜ |
-| 5 | Evaluation and Validation | 15 to 18 | ⬜ | ⬜ | ⬜ |
-| 6 | Final Project | 19 | ⬜ | ⬜ | ⬜ |
+| Module | Topic | Notebooks | Notes | Status |
+|---|---|---|---|---|
+| 1 | ML Foundations | 01 | ⬜ | ⬜ |
+| 2 | Linear and Logistic Regression | 02 to 05 | ⬜ | ⬜ |
+| 3 | Supervised Learning Models | 06 to 10 | ⬜ | ⬜ |
+| 4 | Unsupervised Learning Models | 11 to 14 | ⬜ | ⬜ |
+| 5 | Evaluation and Validation | 15 to 18 | ⬜ | ⬜ |
+| 6 | Final Project | 19 | ⬜ | ⬜ |
 
 Status key: ⬜ not started · 🟨 in progress · ✅ complete
 
